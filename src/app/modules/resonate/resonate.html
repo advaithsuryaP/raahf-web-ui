@@ -1,18 +1,27 @@
-<div class="flex flex-wrap">
-    <!-- Rectangle 1 -->
-    <div class="w-1/2 h-1/2 bg-red-500">
-        <h1>Rectangle 1</h1>
+<div class="m-4 p-4">
+    <div class="flex gap-2">
+        @for (month of months; track month) {
+        <div
+            class="flex items-center justify-center w-1/2 h-1/2 border-1 border-gray-400 rounded-md p-2"
+            [class.border-2]="month === currentMonth"
+            [class.font-semibold]="month === currentMonth"
+            [class.text-blue-700]="month === currentMonth">
+            <p>{{ month }}</p>
+        </div>
+        }
     </div>
-    <!-- Rectangle 2 -->
-    <div class="w-1/2 h-1/2 bg-blue-500">
-        <h1>Rectangle 2</h1>
-    </div>
-    <!-- Rectangle 3 -->
-    <div class="w-1/2 h-1/2 bg-green-500">
-        <h1>Rectangle 3</h1>
-    </div>
-    <!-- Rectangle 4 -->
-    <div class="w-1/2 h-1/2 bg-yellow-500">
-        <h1>Rectangle 4</h1>
+
+    <div class="flex items-center justify-center mt-4">
+        <div class="flex flex-wrap gap-2">
+            @for (day of days; track day) {
+            <div
+                class="flex items-center justify-center w-[2rem] h-[2rem] p-2 border-1 border-gray-400 rounded-md"
+                [class.border-2]="day === currentDay"
+                [class.text-blue-700]="day === currentDay"
+                [class.font-semibold]="day === currentDay">
+                <h1>{{ day }}</h1>
+            </div>
+            }
+        </div>
     </div>
 </div>
