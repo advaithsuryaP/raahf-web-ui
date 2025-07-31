@@ -11,17 +11,26 @@
         }
     </div>
 
-    <div class="flex items-center justify-center mt-4">
+    <div class="flex items-center mt-4">
         <div class="flex flex-wrap gap-2">
             @for (day of days; track day) {
             <div
                 class="flex items-center justify-center w-[2rem] h-[2rem] p-2 border-1 border-gray-400 rounded-md"
-                [class.border-2]="day === currentDay"
-                [class.text-blue-700]="day === currentDay"
-                [class.font-semibold]="day === currentDay">
-                <h1>{{ day }}</h1>
+                [class.border-2]="day === yesterday"
+                [class.text-blue-700]="day === yesterday"
+                [class.font-semibold]="day === yesterday">
+                <p>{{ day }}</p>
             </div>
             }
         </div>
+    </div>
+
+    <div class="flex flex-col gap-2 mt-4">
+        @for (habit of habits; track habit; let i = $index) {
+        <div class="flex items-center gap-2">
+            <p>{{ i + 1 }}. {{ habit }}</p>
+            <mat-slide-toggle color="primary">Done</mat-slide-toggle>
+        </div>
+        }
     </div>
 </div>
