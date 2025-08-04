@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
-    selector: 'app-resonate',
+    selector: 'app-resonate.component',
     imports: [MatSlideToggleModule, MatButtonModule],
-    templateUrl: './resonate.html',
-    styleUrl: './resonate.css'
+    templateUrl: './resonate.component.html',
+    styleUrl: './resonate.component.css'
 })
-export default class Resonate implements OnInit {
+export default class ResonateComponent {
     months: string[] = [
         'January',
         'February',

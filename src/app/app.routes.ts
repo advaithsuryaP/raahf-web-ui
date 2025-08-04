@@ -7,6 +7,10 @@ export const routes: Routes = [
         redirectTo: 'resonate'
     },
     {
+        path: 'finance',
+        loadChildren: () => import('./modules/finance/finance.routes')
+    },
+    {
         path: 'resonate',
         loadChildren: () => import('./modules/resonate/resonate.routes')
     }

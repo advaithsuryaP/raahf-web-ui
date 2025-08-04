@@ -1,1 +1,9 @@
-<router-outlet />
+<div class="mx-4 my-2 p-4">
+    <div class="flex gap-2">
+        <button type="button" mat-raised-button color="primary" [routerLink]="['/resonate']">Resonate</button>
+        <button type="button" mat-raised-button color="primary" [routerLink]="['/finance']">Finance</button>
+    </div>
+    <div class="mt-4">
+        <router-outlet />
+    </div>
+</div>

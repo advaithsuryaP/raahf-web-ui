@@ -3,6 +3,6 @@ import { Route } from '@angular/router';
 export default [
     {
         path: '',
-        loadComponent: () => import('./resonate.component')
+        loadComponent: () => import('./finance.component')
     }
 ] as Route[];

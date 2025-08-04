@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Resonate } from './resonate';
+import { ResonateComponent } from './resonate.component';
 
-describe('Resonate', () => {
-  let component: Resonate;
-  let fixture: ComponentFixture<Resonate>;
+describe('ResonateComponent', () => {
+  let component: ResonateComponent;
+  let fixture: ComponentFixture<ResonateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Resonate]
+      imports: [ResonateComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Resonate);
+    fixture = TestBed.createComponent(ResonateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
